@@ -14,6 +14,7 @@ This project is a **responsive React component** built using **Tailwind CSS**, d
 - ✅ "Add +" button over the image with absolute positioning
 - ✅ Customisable label shown conditionally
 - ✅ Veg/Non-Veg indicator
+- ✅ Add to cart functionality(only length of the cart item will be show)
 - ✅ Expandable description (`more/less`)
 - ✅ Dynamic rating display with stars and review count
 - ✅ Smooth UI with clean layout
