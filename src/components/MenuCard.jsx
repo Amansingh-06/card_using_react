@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Rating from './Rating';
 import Description from './Description';
+import { MenuContext } from '../context/MenuContext';
 
 const MenuCard = ({ item }) => {
+    const { addToCart } = useContext(MenuContext);
     return (
         <div className="border-b border-dashed p-4 flex flex-col md:flex-row gap-4 items-start">
             {/* Left Section */}
@@ -34,7 +36,8 @@ const MenuCard = ({ item }) => {
                         alt={item.name}
                         className="w-full h-full rounded-md object-cover"
                     />
-                    <button className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white text-red-500 border border-red-500 px-4 py-1 text-sm font-bold rounded shadow">
+                    <button className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white text-red-500 border border-red-500 px-4 py-1 text-sm font-bold rounded shadow"
+                        onClick={() => addToCart(item)}>
                         ADD +
                     </button>
                 </div>
